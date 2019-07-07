@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb+srv://agmatyja:!fzhutm0n@cluster0-vsujr.mongodb.net/test?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://agmatyja:!fzhutm0n@cluster0-vsujr.mongodb.net/test?retryWrites=true&w=majority', { useFindAndModify: false });
 
 
 //new user Schema
