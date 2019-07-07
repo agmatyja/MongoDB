@@ -109,7 +109,7 @@ const updateUsername = function() {
     return User.findOneAndUpdate({ username: 'Benny_the_boy' }, { username: 'Benny_the_man' }, { new: true }, function(err, user) {
         if (err) throw err;
 
-        console.log('Nazwa uzytkownika po aktualizacji to ' + user.username);
+        console.log('User updated');
     })
 }
 
@@ -152,3 +152,4 @@ Promise.all([kenny.save(), mark.save(), benny.save()])
     .then(findKennyAndDelete)
     .then(findBennyAndRemove)
     .catch(console.log.bind(console))
+    .finally(process.exit)
