@@ -135,7 +135,7 @@ const findKennyAndDelete = function() {
 
 const findBennyAndRemove = function() {
     // find specific user and delete
-    return User.findOneAndRemove({ username: 'Benny_the_man' })
+    return User.findOne({ username: 'Benny_the_man' })
         .then(function(user) {
             return user.remove(function() {
                 console.log('User successfully deleted');
